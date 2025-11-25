@@ -1,0 +1,18 @@
+﻿/* Replace with variables */
+:root {
+    --primary: #E7F1F3;
+    --primary-hover: #00AAB8;
+    --sidebar-bg: #000;
+    --sidebar-text: #999999;
+    --sidebar-text-hover: #fff;
+    --sidebar-link-hover-bg: rgba(255, 255, 255, 0.2);
+    --sidebar-link-border-hover: red;
+    --brand-primary: #7399C6;
+    --brand-secondary: #4E7BA8;
+    --brand-muted: #C7D7EA;
+    --icon-foreground: #FFFFFF; /* white in light theme */
+}
+
+    :root.dark {
+        --icon-primary: #FFAA33;
+    }

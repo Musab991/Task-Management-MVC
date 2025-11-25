@@ -1,3 +1,11 @@
+
+
+/* Import component styles */
+@import '../components/sidebar.css';
+@import 'colors.css';
+@import 'spacing.css';
+@import 'typography.css';
+
 html {
   font-size: 14px;
 }
@@ -19,4 +27,8 @@ html {
 
 body {
   margin-bottom: 60px;
+}
+
+footer {
+    z-index: 900;
 }

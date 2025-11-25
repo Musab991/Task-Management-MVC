@@ -1,0 +1,67 @@
+﻿<!-- Sidebar -->
+<link rel="stylesheet" href="~/css/colors.css" asp-append-version="true" />
+
+<div id="sidebar-wrapper">
+	<ul class="sidebar-nav nav-pills nav-stacked d-grid gap-3" id="menu">
+
+		<li>
+
+			<a href="#" class="d-flex flex-column align-items-center text-center">
+				<div>
+
+					<svg width="24" height="24" viewBox="0 0 24 24" fill="var(--icon-foreground)" xmlns="http://www.w3.org/2000/svg">
+						<path opacity="0.4" stroke="var(--brand-primary)" d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" fill="var(--brand-primary)" />
+						<path  d="M12 19.75C7.73 19.75 4.25 16.27 4.25 12C4.25 10.64 4.61 9.31 5.28 8.14C5.49 7.78 5.94999 7.66 6.29999 7.86L12.37 11.35C12.73 11.56 12.85 12.01 12.65 12.37C12.44 12.73 11.99 12.85 11.63 12.65L6.25 9.56C5.93 10.33 5.76001 11.16 5.76001 12C5.76001 15.45 8.56001 18.25 12.01 18.25C15.46 18.25 18.26 15.45 18.26 12C18.26 8.55 15.46 5.75 12.01 5.75C10.65 5.75 9.35001 6.18 8.26001 7C7.93001 7.25 7.45999 7.18001 7.20999 6.85001C6.95999 6.52001 7.02999 6.05 7.35999 5.8C8.70999 4.79 10.32 4.25 12.01 4.25C16.28 4.25 19.76 7.73 19.76 12C19.76 16.27 16.27 19.75 12 19.75Z" fill="var(--icon-foreground)" />
+					</svg>
+
+				</div>
+				<p>Dashboard</p>
+			</a>
+		</li>
+
+		<li>
+			<a href="@Url.Action("Index", "Contract", new { area = "ContractManagement" })" class="d-flex flex-column align-items-center text-center">
+				<div>
+
+					<svg width="24" height="24" viewBox="0 0 24 24" fill="var(--icon-foreground)" xmlns="http://www.w3.org/2000/svg">
+						<path opacity="0.4" stroke="var(--brand-primary)" d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" fill="var(--brand-primary)" />
+						<path stroke="var(--brand-primary)" d="M12.1471 18.6766C15.2658 18.6766 17.7941 16.1483 17.7941 13.0295H12.1471L12.1471 7.38241C9.02829 7.38239 6.5 9.91069 6.5 13.0295C6.5 16.1483 9.02827 18.6766 12.1471 18.6766Z"  stroke-linecap="round" stroke-linejoin="round" />
+						<path stroke="var(--brand-primary)" d="M14.6176 6.32349V10.5045H18.5V10.2058C18.5 8.06167 16.7618 6.32349 14.6176 6.32349Z"  stroke-linecap="round" stroke-linejoin="round" />
+					</svg>
+
+				</div>
+				<p>Contracts</p>
+			</a>
+		</li>
+		<li>
+			<a href="#" class="d-flex flex-column align-items-center text-center">
+				<div>
+
+					<svg width="24" height="24" viewBox="0 0 24 24" fill="var(--icon-foreground)" xmlns="http://www.w3.org/2000/svg">
+
+						<!-- Outer circle (same as your other icons) -->
+						<path opacity="0.4"
+							  stroke="var(--brand-primary)"
+							  fill="var(--brand-primary)"
+							  d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" />
+
+						<!-- Forms / Document Icon -->
+						<path fill="var(--icon-foreground)" d="M15.5 6H10C8.9 6 8 6.9 8 8V16C8 17.1 8.9 18 10 18H14C15.1 18 16 17.1 16 16V8.5L15.5 6Z" />
+						<path fill="var(--icon-foreground)" d="M16 8.5H14.5C14.22 8.5 14 8.28 14 8V6.5" />
+
+						<!-- Lines inside the form -->
+						<path fill="var(--icon-foreground)" d="M11 11H14V12H11V11Z" />
+						<path fill="var(--icon-foreground)" d="M11 14H14V15H11V14Z" />
+
+					</svg>
+
+				</div>
+				<p>Forms</p>
+			</a>
+		</li>
+
+	
+
+	</ul>
+</div>
+<!-- /#sidebar-wrapper -->
