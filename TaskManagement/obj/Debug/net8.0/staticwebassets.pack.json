@@ -9,8 +9,16 @@
       "PackagePath": "staticwebassets\\components\\sidebar.css"
     },
     {
+      "Id": "C:\\Users\\User\\source\\repos\\Task-Management-MVC\\TaskManagement\\wwwroot\\css\\all.css",
+      "PackagePath": "staticwebassets\\css\\all.css"
+    },
+    {
       "Id": "C:\\Users\\User\\source\\repos\\Task-Management-MVC\\TaskManagement\\wwwroot\\css\\colors.css",
       "PackagePath": "staticwebassets\\css\\colors.css"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\Task-Management-MVC\\TaskManagement\\wwwroot\\css\\normalize\\normalize.css",
+      "PackagePath": "staticwebassets\\css\\normalize\\normalize.css"
     },
     {
       "Id": "C:\\Users\\User\\source\\repos\\Task-Management-MVC\\TaskManagement\\wwwroot\\css\\site.css",
@@ -31,6 +39,10 @@
     {
       "Id": "C:\\Users\\User\\source\\repos\\Task-Management-MVC\\TaskManagement\\wwwroot\\js\\components\\sidebar.js",
       "PackagePath": "staticwebassets\\js\\components\\sidebar.js"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\Task-Management-MVC\\TaskManagement\\wwwroot\\js\\fetchHelper.js",
+      "PackagePath": "staticwebassets\\js\\fetchHelper.js"
     },
     {
       "Id": "C:\\Users\\User\\source\\repos\\Task-Management-MVC\\TaskManagement\\wwwroot\\js\\site.js",
@@ -263,6 +275,22 @@
     {
       "Id": "C:\\Users\\User\\source\\repos\\Task-Management-MVC\\TaskManagement\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\Task-Management-MVC\\TaskManagement\\wwwroot\\webfonts\\fa-brands-400.woff2",
+      "PackagePath": "staticwebassets\\webfonts\\fa-brands-400.woff2"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\Task-Management-MVC\\TaskManagement\\wwwroot\\webfonts\\fa-regular-400.woff2",
+      "PackagePath": "staticwebassets\\webfonts\\fa-regular-400.woff2"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\Task-Management-MVC\\TaskManagement\\wwwroot\\webfonts\\fa-solid-900.woff2",
+      "PackagePath": "staticwebassets\\webfonts\\fa-solid-900.woff2"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\Task-Management-MVC\\TaskManagement\\wwwroot\\webfonts\\fa-v4compatibility.woff2",
+      "PackagePath": "staticwebassets\\webfonts\\fa-v4compatibility.woff2"
     },
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.TaskManagement.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",

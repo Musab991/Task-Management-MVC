@@ -1,52 +1,89 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - TaskManagement</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>@ViewData["Title"] - TaskManagement</title>
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
 
-    <!-- DataTables Bootstrap 5 CSS -->
-    <link rel="stylesheet" href="https://cdn.datatables.net/2.3.5/css/dataTables.bootstrap5.min.css" />
+	<!-- DataTables Bootstrap 5 CSS -->
+	<link rel="stylesheet" href="https://cdn.datatables.net/2.3.5/css/dataTables.bootstrap5.min.css" />
 
-    <!-- DataTables Extensions CSS -->
-    <link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.3.5/css/buttons.bootstrap5.min.css" />
-    <link rel="stylesheet" href="https://cdn.datatables.net/responsive/3.0.7/css/responsive.bootstrap5.min.css" />
+	<!-- DataTables Extensions CSS -->
+	<link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.3.5/css/buttons.bootstrap5.min.css" />
+	<link rel="stylesheet" href="https://cdn.datatables.net/responsive/3.0.7/css/responsive.bootstrap5.min.css" />
 
-    <!-- Site CSS -->
-    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/TaskManagement.styles.css" asp-append-version="true" />
+	<!-- Site CSS -->
+	<link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+
+	@* NORMAILIZE LIBRARY  *@
+	<link rel="stylesheet" href="~/css/normalize/normalize.css" asp-append-version="true" />
+	<link rel="stylesheet" href="~/TaskManagement.styles.css" asp-append-version="true" />
+
+	@* FONT-ASWEOME LIBRARY  *@
+	<link rel="stylesheet" href="~/css/all.css" asp-append-version="true" />
+
+
+	@* SELECT2 *@
+	<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+
+
 </head>
 
 <body>
-    <div class="d-flex">
-        @Html.Partial("_Sidebar")
-        <main role="main" class="flex-fill p-3">
-            @RenderBody()
-        </main>
-    </div>
+	<div id="MainLoader"
+		 style="display:none; position:fixed; top:0; left:0; right:0; bottom:0;
+            background:rgba(255,255,255,0.7); z-index:9999; text-align:center;">
+		<div style="position:absolute; top:45%; left:50%; transform:translate(-50%, -50%);">
+			<div class="spinner-border" style="width: 3rem; height: 3rem;"></div>
+			<p>Loading...</p>
+		</div>
+	</div>
 
-    <!-- ---------------- SCRIPT ORDER START ---------------- -->
-    <!-- 1. jQuery -->
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+	<div class="container row">
 
-    <!-- 2. DataTables Core -->
-    <script src="https://cdn.datatables.net/2.3.5/js/jquery.dataTables.min.js"></script>
 
-    <!-- 3. DataTables Bootstrap 5 -->
-    @* <script src="https://cdn.datatables.net/2.3.5/js/dataTables.bootstrap5.min.js"></script> *@
+		<div id="sidebar-wrapper" class="col-md-3 col-12">
+				@Html.Partial("_Sidebar")
+			</div>
 
-    <!-- (optional) extensions later -->
-    <!-- 7. Your custom JS (ALWAYS LAST) -->
-    <script src="~/js/site.js" asp-append-version="true"></script>
-    <script src="~/js/components/sidebar.js"></script>
+			<!-- Main Content: 9 columns -->
+			<div class="col-md-9 col-12 bg-light p-3">
+				@RenderBody()
+			</div>
 
-    <!-- View-specific scripts -->
-    @await RenderSectionAsync("Scripts", required: false)
+	
 
-    <!-- ---------------- SCRIPT ORDER END ---------------- -->
+	</div>
+
+	<!-- ---------------- SCRIPT ORDER START ---------------- -->
+	<!-- 1. jQuery -->
+	<script src="~/lib/jquery/dist/jquery.min.js"></script>
+
+	<!-- 2. DataTables Core -->
+	<script src="https://cdn.datatables.net/2.3.5/js/jquery.dataTables.min.js"></script>
+
+	<!-- 3. DataTables Bootstrap 5 -->
+	@* <script src="https://cdn.datatables.net/2.3.5/js/dataTables.bootstrap5.min.js"></script> *@
+
+	<!-- (optional) extensions later -->
+	<!-- 7. Your custom JS (ALWAYS LAST) -->
+	<script src="~/js/site.js" asp-append-version="true"></script>
+	<script src="~/js/components/sidebar.js"></script>
+
+
+
+	@* SELECT2 *@
+	<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
+
+	<!-- View-specific scripts -->
+	@await RenderSectionAsync("Scripts", required: false)
+
+
+	<!-- ---------------- SCRIPT ORDER END ---------------- -->
 
 </body>
 </html>

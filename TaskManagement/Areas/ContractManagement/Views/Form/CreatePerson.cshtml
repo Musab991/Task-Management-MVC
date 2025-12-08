@@ -1,0 +1,158 @@
+﻿@using TaskManagement.Extensions
+@model TaskManagement.Models.Entities.Person.PersonViewModel
+<h3>Create person</h3>
+
+
+<form id="myForm" class="needs-validation" novalidate>
+	<!-- Top form-level errors -->
+	<div id="formErrors" class="alert alert-danger d-none">
+		<ul id="formErrorsList" class="mb-0"></ul>
+	</div>	
+	<div class="mb-3">
+
+		@Html.SimpleInputFor(x => x.Name)
+
+	</div>
+	<div class="mb-3">
+		@Html.SimpleInputFor(x => x.Email)
+	</div>
+	<div class="mb-3">
+		@Html.SimpleInputFor(x => x.Job)
+	</div>
+	<div class="mb-3">
+		@Html.SimpleInputFor(x => x.Salary)
+	</div>
+	<div class="mb-3">
+		<label for="datetimeInput" class="form-label">Select start date time </label>
+		<input name="StartDateTime" type="datetime-local" class="form-control" id="datetimeInput" required>
+		<div class="invalid-feedback">
+			Please choose a date and time.
+		</div>
+	</div>
+	<div class="mb-3">
+		<label for="datetimeInput" class="form-label">Select end date time</label>
+		<input name="EndDateTime" type="datetime-local" class="form-control" id="datetimeInput" required>
+		<div class="invalid-feedback">
+			Please choose a date and time.
+		</div>
+
+	</div>
+	<div class="mb-3">
+		<select class="js-example-basic-single" name="state">
+			<option value="AL">Alabama</option>
+			<option value="WY">Wyoming</option>
+		</select>
+
+	</div>
+	
+	
+	<button type="submit" class="btn btn-primary">Submit</button>
+</form>
+@section Scripts {
+	<script src="~/js/fetchHelper.js"></script>
+	<script>
+		$(document).ready(function() {
+			$('.js-example-basic-single').select2();
+		});
+		window.addEventListener('load', function () {
+
+
+			const forms = document.getElementsByClassName('needs-validation');
+
+			Array.prototype.forEach.call(forms, function (form) {
+
+				form.addEventListener('submit', async function (event) {
+
+					event.preventDefault();
+					event.stopPropagation();
+
+					if (!form.checkValidity()) {
+						form.classList.add('was-validated');
+						return; // stop here
+					}
+
+					let formData = new FormData(form);
+
+
+					let result = await fetchPost("/ContractManagement/Form/CreatePerson", formData);
+						window.lastResult = result;
+
+		if (!result.success) {
+
+			// ================================
+			// 1) HANDLE TOP-LEVEL FORM ERRORS
+			// ================================
+			const formErrorsDiv = document.getElementById("formErrors");
+			const list = document.getElementById("formErrorsList");
+
+			// clear old
+			list.innerHTML = "";
+
+			if (result.formErrors && result.formErrors.length > 0) {
+				result.formErrors.forEach(msg => {
+					const li = document.createElement("li");
+					li.textContent = msg;
+					list.appendChild(li);
+				});
+
+				formErrorsDiv.classList.remove("d-none");
+			} else {
+				formErrorsDiv.classList.add("d-none");
+			}
+
+
+			// ================================
+			// 2) HANDLE FIELD-LEVEL ERRORS
+			// ================================
+			for (const [fieldName] of Object.entries(result.errors)) {
+
+				const messages = result.errors[fieldName];
+
+				const input = document.querySelector(`[name="${fieldName}"]`);
+				if (!input) continue;
+
+				  input.addEventListener('input', function () {
+
+						this.setCustomValidity('');
+
+						if (this.checkValidity()) {
+
+							this.classList.remove('is-invalid');
+
+						}
+
+					});
+
+				const errorDiv = input.parentElement.querySelector(".invalid-feedback");
+
+				if (messages.length > 0) {
+
+					input.classList.remove("is-valid");
+					input.classList.add("is-invalid");
+					errorDiv.textContent = messages[0];
+				} else {
+					input.classList.remove("is-invalid");
+					input.classList.remove("is-valid");
+					errorDiv.textContent = "";
+				}
+			}
+
+						form.classList.remove('was-validated');
+
+			return; // stop here
+		}
+						else{
+						showLoader();
+						window.location.href = '/ContractManagement/Form/CreatePerson'
+					}
+					console.log("Result:", result);
+
+				});
+
+			});
+		});
+
+	</script>
+}
+
+

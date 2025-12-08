@@ -1,10 +1,13 @@
 wwwroot\components\sidebar.css
+wwwroot\css\all.css
 wwwroot\css\colors.css
+wwwroot\css\normalize\normalize.css
 wwwroot\css\site.css
 wwwroot\css\spacing.css
 wwwroot\css\typography.css
 wwwroot\favicon.ico
 wwwroot\js\components\sidebar.js
+wwwroot\js\fetchHelper.js
 wwwroot\js\site.js
 wwwroot\lib\bootstrap\dist\css\bootstrap.css
 wwwroot\lib\bootstrap\dist\css\bootstrap.css.map
@@ -63,3 +66,7 @@ wwwroot\lib\jquery-validation\LICENSE.md
 wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.js
 wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.min.js
 wwwroot\lib\jquery-validation-unobtrusive\LICENSE.txt
+wwwroot\webfonts\fa-brands-400.woff2
+wwwroot\webfonts\fa-regular-400.woff2
+wwwroot\webfonts\fa-solid-900.woff2
+wwwroot\webfonts\fa-v4compatibility.woff2

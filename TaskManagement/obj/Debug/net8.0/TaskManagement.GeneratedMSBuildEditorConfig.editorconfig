@@ -24,6 +24,10 @@ build_property.EnableCodeStyleSeverity =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ29udHJhY3RNYW5hZ2VtZW50XFZpZXdzXENvbnRyYWN0XEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/User/source/repos/Task-Management-MVC/TaskManagement/Areas/ContractManagement/Views/Form/CreatePerson.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ29udHJhY3RNYW5hZ2VtZW50XFZpZXdzXEZvcm1cQ3JlYXRlUGVyc29uLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/User/source/repos/Task-Management-MVC/TaskManagement/Areas/ContractManagement/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQ29udHJhY3RNYW5hZ2VtZW50XFZpZXdzXF9WaWV3U3RhcnQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
