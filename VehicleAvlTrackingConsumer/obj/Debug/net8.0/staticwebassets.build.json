@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "7VfRCZANLNQKWzMMc7RbEaqg0aoMAA9r9P/BKTrthNw=",
+  "Source": "VehicleAvlTrackingConsumer",
+  "BasePath": "_content/VehicleAvlTrackingConsumer",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}

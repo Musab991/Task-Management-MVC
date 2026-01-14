@@ -1,0 +1,24 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+using Microsoft.EntityFrameworkCore;
+
+namespace VehicleAvlTrackingConsumer.Models.Jadeh_Development;
+
+[PrimaryKey("Key", "Id")]
+[Table("List", Schema = "HangfireDev")]
+public partial class List1
+{
+    [Key]
+    public long Id { get; set; }
+
+    [Key]
+    [StringLength(100)]
+    public string Key { get; set; } = null!;
+
+    public string? Value { get; set; }
+
+    [Column(TypeName = "datetime")]
+    public DateTime? ExpireAt { get; set; }
+}

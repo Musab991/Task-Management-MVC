@@ -1,0 +1,33 @@
+﻿using System;
+using System.Collections.Generic;
+
+namespace VehicleAvlTrackingConsumer.Models.QA;
+
+public partial class TripLocalizationLocalization
+{
+    public Guid EntityId { get; set; }
+
+    public string LanguageLocale { get; set; } = null!;
+
+    public string? Description { get; set; }
+
+    public int Id { get; set; }
+
+    public string CreatedBy { get; set; } = null!;
+
+    public DateTime CreatedDate { get; set; }
+
+    public bool IsDeleted { get; set; }
+
+    public string? ModifiedBy { get; set; }
+
+    public DateTime? ModifiedDate { get; set; }
+
+    public Guid TenantId { get; set; }
+
+    public int? CreatedByChecksum { get; set; }
+
+    public virtual Trip Entity { get; set; } = null!;
+
+    public virtual SupportedLanguage LanguageLocaleNavigation { get; set; } = null!;
+}

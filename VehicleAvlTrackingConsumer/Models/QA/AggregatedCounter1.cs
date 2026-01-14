@@ -1,0 +1,13 @@
+﻿using System;
+using System.Collections.Generic;
+
+namespace VehicleAvlTrackingConsumer.Models.QA;
+
+public partial class AggregatedCounter1
+{
+    public string Key { get; set; } = null!;
+
+    public long Value { get; set; }
+
+    public DateTime? ExpireAt { get; set; }
+}
